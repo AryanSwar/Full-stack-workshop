@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object Creation</title>
+</head>
+<body>
+    <h1>JavaScript Object Creation</h1>
+
+    <h2>Object Literal:</h2>
+    <script>
+        // Using Object Literal
+        var personLiteral = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30
+        };
+
+        document.write("Name: " + personLiteral.firstName + " " + personLiteral.lastName + "<br>");
+        document.write("Age: " + personLiteral.age + "<br>");
+    </script>
+
+    <h2>Object Instance:</h2>
+    <script>
+        // Using Object Instantiation
+        var personInstance = new Object();
+        personInstance.firstName = "Jane";
+        personInstance.lastName = "Smith";
+        personInstance.age = 25;
+
+        document.write("Name: " + personInstance.firstName + " " + personInstance.lastName + "<br>");
+        document.write("Age: " + personInstance.age + "<br>");
+    </script>
+
+    <h2>Object Constructor:</h2>
+    <script>
+        // Using Object Constructor
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+
+        var personConstructor = new Person("Bob", "Johnson", 35);
+
+        document.write("Name: " + personConstructor.firstName + " " + personConstructor.lastName + "<br>");
+        document.write("Age: " + personConstructor.age + "<br>");
+    </script>
+</body>
+</html>

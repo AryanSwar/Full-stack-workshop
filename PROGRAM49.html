@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 'var' Keyword</title>
+</head>
+<body>
+    <h1>JavaScript 'var' Keyword</h1>
+
+    <script>
+        // Using 'var' to declare and initialize variables
+        var firstName = "John";
+        var lastName = "Doe";
+
+        // Displaying the values of the 'var' variables
+        document.write("Using 'var' to declare and initialize variables:<br>");
+        document.write("First Name: " + firstName + "<br>");
+        document.write("Last Name: " + lastName + "<br>");
+
+        // Reassigning a 'var' variable
+        var age = 30;
+        document.write("<br>Reassigning a 'var' variable:<br>");
+        document.write("Age: " + age + "<br>");
+        age = 35; // Reassigning the 'age' variable
+        document.write("Updated Age: " + age + "<br>");
+
+        // Hoisting with 'var'
+        document.write("<br>Hoisting with 'var':<br>");
+        document.write("Before declaration: " + city + "<br>"); // Outputs: undefined
+        var city = "New York"; // Variable declaration is hoisted to the top
+        document.write("After declaration: " + city + "<br>");
+
+        // 'var' variables have function scope
+        function greet() {
+            if (true) {
+                var message = "Hello, World!";
+            }
+            document.write("<br>'var' variables have function scope:<br>");
+            document.write("Inside function: " + message + "<br>");
+        }
+        greet();
+        document.write("Outside function: " + message + "<br>"); 
+    </script>
+</body>
+</html>
